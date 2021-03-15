@@ -45,7 +45,7 @@ jobs:
           host:${{secrets.SSH_HOST}}
           username:${{secrets.SSH_USER}}
           port:${{secrets.SSH_PORT}}
-          key:${{secretes.SSH_KEY}}
+          key:${{secrets.SSH_KEY}}
           source:"dist"
           target:"test"
    
