@@ -28,7 +28,6 @@ const ForgotPassword: React.FC = () => {
 
     const [loading, setLoading] = useState(false)
 
-    const { signIn } = useAuth()
     const { addToast } = useToast()
     const history = useHistory()
 

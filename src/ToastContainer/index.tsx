@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Container } from './styles'
-import { ToastMessage, useToast } from '../hooks/toast'
+import { ToastMessage } from '../hooks/toast'
 
 import Toast from './Toast'
 import { useTransition } from "react-spring"

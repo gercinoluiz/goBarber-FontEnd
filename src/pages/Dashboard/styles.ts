@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 
-import colorPallete from '../../utils/colorPallete'
 
 
 export const Container = styled.div``;
