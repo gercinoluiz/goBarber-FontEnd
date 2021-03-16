@@ -16,8 +16,9 @@ const icons = {
     success: <FiCheckCircle size={24} />
 }
 
-
 const Toast: React.FC<ToastProps> = ({ message, style }) => {
+  
+    const { removeToast } = useToast()
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -27,9 +28,9 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
         return () => {
             clearTimeout(timer)  // esse return [e executado toda vez que o React desmonta esse componente]
         }
-    }, [message.id])
+    }, [message.id, removeToast])
 
-    const { removeToast } = useToast()
+
     return (
         <Container style={style} type={message.type} hasdescription={Number(!!message.description)}>
             {icons[message.type || 'info']}
