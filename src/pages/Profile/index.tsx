@@ -1,4 +1,4 @@
-import React, { useEffect, ChangeEvent, useCallback, useRef } from 'react';
+import React, {  ChangeEvent, useCallback, useRef } from 'react';
 import { FiUser, FiMail, FiLock, FiCamera, FiArrowLeft } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
@@ -104,7 +104,7 @@ const Profile: React.FC = () => {
                 });
             }
         },
-        [addToast, history],
+        [addToast, history, updateUser],
     );
 
     // useEffect(() => {

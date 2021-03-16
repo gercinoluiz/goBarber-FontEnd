@@ -18,7 +18,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
 
 
     //----------- HOOKS
-    const { defaultValue, registerField, fieldName, error } = useField(name)
+    const {  registerField, fieldName, error } = useField(name)
     const inputReff = useRef<HTMLInputElement>(null)
 
 
@@ -49,7 +49,8 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
         registerField({
             name: fieldName,
             ref: inputReff.current,
-            path: 'value'
+            path: 'value',
+            
 
 
         })

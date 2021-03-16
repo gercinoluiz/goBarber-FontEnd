@@ -76,7 +76,7 @@ const AuthProvider: React.FC = ({ children }) => {
             user,
         })
 
-    },[])
+    },[authData.token])
 
     const signOut = useCallback(() => {
 

@@ -1,7 +1,6 @@
 import React from "react"
 
 import { Container } from './styles'
-import { FiAlertCircle, FiMessageSquare, FiXCircle } from 'react-icons/fi'
 import { ToastMessage, useToast } from '../hooks/toast'
 
 import Toast from './Toast'
@@ -21,7 +20,6 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ messages }) => {
         leave: { right: '-110%' }
     })
 
-    const { removeToast } = useToast()
 
     return (<Container>
         {

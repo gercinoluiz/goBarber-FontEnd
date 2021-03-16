@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from "react"
 import logoImg from "../../assets/logo.png"
 import { Container, Content, Background } from "./styles"
-import { FiLogIn, FiMail, FiLock } from "react-icons/fi"
+import { FiLogIn, FiMail } from "react-icons/fi"
 import Input from "../../components/Input"
 import Button from "../../components/Button"
 import { Form } from "@unform/web" // bets form ever
@@ -76,7 +76,7 @@ const ForgotPassword: React.FC = () => {
         }
 
 
-    }, [signIn, addToast, history])
+    }, [ addToast, history])
 
     return (
         <Container>
