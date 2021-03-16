@@ -8,7 +8,6 @@ import { Form } from "@unform/web" // bets form ever
 import { FormHandles } from "@unform/core" // bets form ever
 import * as Yup from "yup"
 import getValidationErrors from "../../utils/getValidationErrors"
-import { useAuth } from '../../hooks/auth'
 
 import { useToast } from "../../hooks/toast"
 import { Link, useHistory } from "react-router-dom"
