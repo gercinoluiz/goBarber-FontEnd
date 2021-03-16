@@ -18,7 +18,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
 
 
     //----------- HOOKS
-    const {  registerField, fieldName, error } = useField(name)
+    const { defaultValue, registerField, fieldName, error } = useField(name)
     const inputReff = useRef<HTMLInputElement>(null)
 
 
@@ -63,7 +63,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
 
             {Icon && <Icon size={20} />}
 
-            <input onFocus={handleFocus} onBlur={handleBlur} ref={inputReff} {...rest} />
+            <input onFocus={handleFocus} defaultValue={defaultValue} onBlur={handleBlur} ref={inputReff} {...rest} />
             {error && <Error title={error} > <FiAlertCircle size={20} color="#c53030" /></Error>}
         </Container>
 

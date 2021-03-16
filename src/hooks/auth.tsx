@@ -1,5 +1,6 @@
 import React, { createContext, useCallback, useContext, useState } from 'react'
 import api from '../services/api'
+import noPhotoUSer from '../assets/no-photo.png'
 
 
 interface signInData {
@@ -60,6 +61,10 @@ const AuthProvider: React.FC = ({ children }) => {
 
 
         const { user, token } = response.data
+// my code here
+        if (!user.avatar_url){
+            user.avatar_url = noPhotoUSer
+        }
 
         localStorage.setItem('@BarberApp:token', token);
         localStorage.setItem('@BarberApp:user', JSON.stringify(user))
