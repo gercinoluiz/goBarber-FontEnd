@@ -104,7 +104,7 @@ const Profile: React.FC = () => {
                 });
             }
         },
-        [addToast, history, updateUser],
+        [addToast, history, updateUser, user.id],
     );
 
     // useEffect(() => {

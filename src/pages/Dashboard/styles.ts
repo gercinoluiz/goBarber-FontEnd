@@ -58,7 +58,7 @@ display: flex;
     }
     a {
       text-decoration: none;
-      color:  ${colorPallete.primary.main};
+      color:  #785F35;
       &:hover {
         opacity: 0.8;
       }
@@ -83,7 +83,7 @@ export const Schedule = styled.div`
   }
   p {
     margin-top: 8px;
-    color:${colorPallete.primary.main};
+    color:#785F35;
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -95,7 +95,7 @@ export const Schedule = styled.div`
       content: '';
       width: 1px;
       height: 12px;
-      background:${colorPallete.primary.main};
+      background:#785F35;
       margin: 0 8px;
     }
 
@@ -125,13 +125,13 @@ margin-top: 64px;
       width: 1px;
       left: 0;
       top: 10%;
-      background:${colorPallete.primary.main};
+      background:#785F35;
     }
     img {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      background:${colorPallete.primary.main};
+      background:#785F35;
     }
     strong {
       margin-left: 24px;
@@ -143,7 +143,7 @@ margin-top: 64px;
       align-items: center;
       color: #999591;
       svg {
-        color:${colorPallete.primary.main};
+        color:#785F35;
         margin-right: 8px;
       }
     }
@@ -180,7 +180,7 @@ export const Appointment = styled.div`
     color: #f4ede8;
     width: 70px;
     svg {
-      color:${colorPallete.primary.main};
+      color:#785F35;
       margin-right: 8px;
     }
   }
@@ -196,7 +196,7 @@ export const Appointment = styled.div`
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background:${colorPallete.primary.main};
+      background:#785F35;
     }
     strong {
       margin-left: 16px;
@@ -249,7 +249,7 @@ export const Calendar = styled.aside`
     background: transparent !important;
   }
   .DayPicker-Day--selected {
-    background:${colorPallete.primary.main} !important;
+    background:#785F35 !important;
     border-radius: 10px;
     color: #232129 !important;
   }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
-import colorPallete from '../../utils/colorPallete'
+
 
 export const Container = styled.div`
   > header {
@@ -66,8 +66,8 @@ export const AvatarInput = styled.div`
     position: absolute;
     width: 48px;
     height: 48px;
-    color: ${colorPallete.primary.main} ;
-    background:  ${colorPallete.primary.main};
+    color: #785F35 ;
+    background:  #785F35;
 
     border-radius: 50%;
     right: 0;
@@ -87,7 +87,7 @@ export const AvatarInput = styled.div`
       color: #312e38;
     }
     &:hover {
-      background: ${shade(0.2, colorPallete.primary.main)};
+      background: ${shade(0.2, '#785F35')};
     }
   }
 `;
