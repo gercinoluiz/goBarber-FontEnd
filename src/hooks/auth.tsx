@@ -61,7 +61,7 @@ const AuthProvider: React.FC = ({ children }) => {
 
 
         const { user, token } = response.data
-// my code here
+// my code hereIsProviderText
         if (!user.avatar_url){
             user.avatar_url = noPhotoUSer
         }

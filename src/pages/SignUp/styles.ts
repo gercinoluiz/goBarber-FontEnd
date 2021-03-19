@@ -4,7 +4,9 @@ import { shade } from 'polished'
 
 import signUpBackGroundImage from "../../assets/sigup-background.png"
 
-
+interface IsProviderContainerProps {
+    checked: boolean
+}
 
 
 const apearFromRight = keyframes` // This is for CSS animation
@@ -100,3 +102,30 @@ export const Background = styled.div`
     
 
 `
+
+export const IsProviderContainer = styled.div<IsProviderContainerProps>`
+
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    width:100%;
+
+svg {
+
+    color: ${props => props.checked ?'#785F35' : '#FFF' }
+    
+
+
+}
+
+p{
+
+    margin-left:16px;
+
+    color: ${props => props.checked ?'#785F35' : '#FFF' }
+}
+
+`;
+
+
+

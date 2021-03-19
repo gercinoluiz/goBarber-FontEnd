@@ -1,8 +1,9 @@
-import React, { useCallback, useRef } from "react"
+import React, { useCallback, useRef, useState } from "react"
 
 import logoImg from "../../assets/logo.png"
-import { Container, Content, Background } from "./styles"
+import { Container, Content, Background,  IsProviderContainer } from "./styles"
 import { FiMail, FiLock, FiUser, FiArrowLeft } from "react-icons/fi"
+import { AiFillCheckCircle} from "react-icons/ai"
 import Input from "../../components/Input"
 import Button from "../../components/Button"
 
@@ -20,9 +21,12 @@ interface SignUpData {
     email: string;
     password: string;
     name: string
+    isProvider:boolean
 }
 
 const SignUp: React.FC = () => {
+
+    const [checked, setChecked] = useState(false)
 
     const formRef = useRef<FormHandles>(null)
     const { addToast } = useToast()
@@ -42,9 +46,14 @@ const SignUp: React.FC = () => {
                 password: Yup.string().required("Senha Obrigatória").min(6, 'No mínimo 6 dígitos')
             })
 
+       
+
             await YupSchema.validate(data, {
                 abortEarly: false
             })
+           console.log({checked})
+
+            data.isProvider = checked;
 
             await api.post('/users', data)
 
@@ -52,7 +61,7 @@ const SignUp: React.FC = () => {
 
         } catch (error) {
 
-            if (error instanceof Yup.ValidationError){
+            if (error instanceof Yup.ValidationError) {
                 const errors = getValidationErrors(error)
 
                 formRef.current?.setErrors(errors)
@@ -63,8 +72,13 @@ const SignUp: React.FC = () => {
         }
 
 
-    }, [addToast, hystory]
+    }, [addToast, hystory, checked]
     )
+
+    const handleChekcBoxChange = useCallback(() => {
+        setChecked(!checked)
+    
+    }, [checked])
     return (
         <Container>
             <Background />
@@ -79,6 +93,13 @@ const SignUp: React.FC = () => {
                     < Input name="name" icon={FiUser} placeholder="Nome" />
                     < Input name="email" icon={FiMail} placeholder="E-mail" />
                     <Input name="password" icon={FiLock} type="password" placeholder="Senha" />
+                    <IsProviderContainer onClick={handleChekcBoxChange} checked={checked}>
+
+                    
+                            <AiFillCheckCircle size={22} />
+               
+                        <p>Sou Barbeiro</p>
+                    </IsProviderContainer>
                     <Button type="submit"  >Criar conta</Button>
 
                 </Form>
